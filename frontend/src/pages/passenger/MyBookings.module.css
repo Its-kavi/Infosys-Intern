@@ -1,0 +1,384 @@
+.pageWrapper {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    padding-bottom: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.bookingsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.bookingCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    transition: transform 0.2s;
+}
+
+.bookingCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.statusBadge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+/* Dynamic Status Colors */
+.CONFIRMED {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.ONBOARDED {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.PENDING {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.PAYMENT {
+    background-color: #e2e8f0;
+    color: #2c3e50;
+    border: 1px solid #cbd5e1;
+}
+
+.CANCELLED {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.REFUNDED {
+    background-color: #e2e8f0;
+    color: #64748b;
+}
+
+.bookingId {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.route {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.2rem;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.connector {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #eee;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.detailItem {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 1rem;
+}
+
+.costInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.seats {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.refundInfo {
+    margin-top: 0.5rem;
+}
+
+.supportInfo {
+    margin-top: 0.5rem;
+}
+
+.refundBadge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+}
+
+.refundPending {
+    background-color: #fff7ed;
+    color: #c2410c;
+}
+
+.refundApproved {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.refundRejected {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.refundCancelled {
+    background-color: #e2e8f0;
+    color: #475569;
+}
+
+.supportBadge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+}
+
+.supportPending {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.supportReview {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.supportResolved {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.payBtn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.payBtn:hover {
+    background-color: #218838;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 3rem;
+    color: #888;
+    background: white;
+    border-radius: 8px;
+}
+
+.supportList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.supportCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.supportHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.supportTitle {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.supportMeta {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.supportBody {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: #334155;
+}
+
+.supportRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1.5rem;
+}
+
+.modal {
+    width: min(520px, 100%);
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.2);
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+.closeBtn {
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.modalBody {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.modalLabel {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.modalInput,
+.modalTextarea {
+    border: 1px solid #cbd5f5;
+    border-radius: 8px;
+    padding: 0.65rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.modalError {
+    background: #fef2f2;
+    color: #b91c1c;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabBtn {
+    background: none;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.tabBtn:hover {
+    color: #0f4c81;
+    background-color: #f1f5f9;
+}
+
+.active {
+    color: #0f4c81;
+    border-bottom-color: #0f4c81;
+    font-weight: 600;
+}

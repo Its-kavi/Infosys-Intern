@@ -1,0 +1,283 @@
+.pageWrapper {
+    min-height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    /* overflow-x: hidden; */
+    /* Prevent horizontal scroll from image bleeding */
+}
+
+.mainContent {
+    /* Make this a section that takes up at least full viewport height */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+/* Text Content */
+.textContent {
+    flex: 1;
+    z-index: 10;
+    /* Ensure text is above image if they overlap */
+    max-width: 650px;
+    /* padding-top: 4rem; */
+    padding-left: 4rem;
+    /* Move text to the right */
+    /* Visual balance */
+}
+
+.badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #9ca3af;
+    /* Gray-400 */
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.headline {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #111827;
+    /* Gray-900 */
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.subheadline {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #4b5563;
+    /* Gray-600 */
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #6b7280;
+    /* Gray-500 */
+    margin-bottom: 3rem;
+    max-width: 480px;
+}
+
+/* CTA Buttons */
+.ctaGroup {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.primaryBtn {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    /* Pill shape */
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.4);
+    transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px -5px rgba(79, 70, 229, 0.5);
+}
+
+.secondaryBtn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    border: 1px solid #e5e7eb;
+    color: #374151;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+    background: #245FE4;
+    border-color: #d1d5db;
+}
+
+/* Image Section - Seamless Blending */
+.imageContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 85%;
+    /* Wide container for immersive feel */
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    /* Let clicks pass through */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.heroImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* seamless blend */
+    object-position: 25% center;
+    /* Shift focus to the left to show the driver */
+
+    /* Advanced Masking: Keep left side transparent to protect text, then fade in */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 30%, black 70%), linear-gradient(to bottom, transparent 0%, black 15%);
+    mask-image: linear-gradient(to right, transparent 0%, transparent 30%, black 70%), linear-gradient(to bottom, transparent 0%, black 15%);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+}
+
+/* About Section */
+.aboutSection {
+    background-color: #f9fafb;
+    min-height: 100vh;
+    padding: 8rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.aboutContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.aboutContent h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.aboutContent p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+}
+
+.aboutImage {
+    /* Replaced with Feature Grid */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.featureCard {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f3f4f6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featureCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.featureIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: #eff6ff;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.featureCard h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.featureCard p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 0;
+    /* Override previous p style */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .headline {
+        font-size: 3.5rem;
+    }
+
+    .imageContainer {
+        width: 50%;
+        opacity: 0.5;
+        /* Fade it out more on smaller screens so text is readable */
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 50%, black 100%);
+        mask-image: linear-gradient(to right, transparent 0%, black 50%, black 100%);
+    }
+
+    .aboutContainer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .aboutImage {
+        order: 1;
+        /* Grid below text on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContent {
+        flex-direction: column;
+        padding-top: 2rem;
+        min-height: auto;
+        /* Allow content to flow naturally on mobile */
+    }
+
+    .textContent {
+        text-align: center;
+        padding-top: 0;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ctaGroup {
+        justify-content: center;
+    }
+
+    .imageContainer {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        margin-top: 2rem;
+        opacity: 1;
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 100%);
+        mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 100%);
+    }
+
+    .heroImage {
+        height: 100%;
+        object-position: center;
+    }
+}

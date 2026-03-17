@@ -1,0 +1,163 @@
+.pageWrapper {
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    /* Light Gray Background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    /* Centered Card Width */
+    margin: 0 auto;
+}
+
+.formCard {
+    background: white;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+.formHeader {
+    margin-bottom: 2.5rem;
+}
+
+.formHeader h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.formHeader p {
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+.errorAlert {
+    color: #ef4444;
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.forgotPasswordLink {
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+.forgotBtn {
+    background: none;
+    border: none;
+    color: #4f46e5;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.forgotBtn:hover {
+    color: #4338ca;
+    text-decoration: underline;
+}
+
+.submitBtn {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+    transition: all 0.2s ease;
+}
+
+.submitBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+}
+
+.footerText {
+    margin-top: 2rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.link {
+    color: #4f46e5;
+    font-weight: 600;
+    margin-left: 0.25rem;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Modal Styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.modalText {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.modalActions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.modalActions button {
+    flex: 1;
+}

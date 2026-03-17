@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ride Confirmed</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+    <div style="max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+        <h2 style="color: #28a745;">Ride Confirmed!</h2>
+        <p>Hello <span th:text="${name}">User</span>,</p>
+        <p>Your ride has been successfully booked. Here are the details:</p>
+        <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0;">
+            <p><strong>Route:</strong> <span th:text="${source}">Source</span> to <span th:text="${dest}">Destination</span></p>
+            <p><strong>Amount Paid:</strong> Rs. <span th:text="${amount}">0.0</span></p>
+            <p><strong>Verification OTP:</strong> <span style="font-size: 20px; letter-spacing: 2px; color: #007bff; font-weight: bold;" th:text="${otp}">000000</span></p>
+        </div>
+        <p>Please share this OTP with your driver when you board the ride.</p>
+        <p>Have a safe and comfortable journey!</p>
+        <p>The RideConnect Team</p>
+    </div>
+</body>
+</html>

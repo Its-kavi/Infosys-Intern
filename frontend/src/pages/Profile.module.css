@@ -1,0 +1,195 @@
+.pageWrapper { 
+    background-color: #f8f9fa; 
+    min-height: 100vh; 
+    padding-bottom: 4rem; 
+}
+
+.pageTitle { 
+    margin: 2rem 0 1.5rem; 
+    color: #1f2937; 
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Grid Layout */
+.profileGrid {
+    display: grid;
+    grid-template-columns: 350px 1fr; 
+    gap: 1.5rem;
+    align-items: start; 
+}
+
+@media (max-width: 900px) {
+    .profileGrid { grid-template-columns: 1fr; }
+}
+
+.card {
+    background: white; 
+    padding: 2rem; 
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02); 
+    border: 1px solid #e5e7eb;
+    margin-bottom: 1.5rem;
+}
+
+/* Avatar Styles */
+.avatarSection { 
+    text-align: center; 
+    margin-bottom: 2rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+    width: 120px; 
+    height: 120px; 
+    background: #e3f2fd; 
+    color: #0f4c81;
+    border-radius: 50%; 
+    margin-bottom: 1rem; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    font-size: 2rem;
+    overflow: hidden;
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.avatar img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+/* Car Image Styles */
+.carUploadContainer {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.carPreview {
+    width: 100%;
+    height: 400px;
+    background-size: contain;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border: 1px dashed #d1d5db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carPreview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carPlaceholder {
+    color: #9ca3af;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.uploadBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f1f5f9;
+    color: #475569;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s;
+}
+
+.uploadBtn:hover {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+/* Form Elements */
+.textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #d1d5db; 
+    border-radius: 6px;
+    font-family: inherit; 
+    margin-bottom: 1rem;
+    resize: vertical;
+    font-size: 0.95rem;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: #0f4c81;
+    box-shadow: 0 0 0 3px rgba(15, 76, 129, 0.1);
+}
+
+.disabledInput {
+    background-color: #f3f4f6;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+.driverSection h3, .passwordSection h3 {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    color: #1f2937;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 0.5rem;
+}
+
+.row { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 1rem; 
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #374151;
+    font-size: 0.9rem;
+}
+
+/* Footer & Alerts */
+.footerActions {
+    grid-column: 1 / -1;
+    display: flex; 
+    justify-content: flex-end;
+    position: sticky; 
+    bottom: 0;
+    background: white; 
+    padding: 1rem 2rem;
+    border-top: 1px solid #e5e7eb;
+    margin: 0 -2rem -2rem; 
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+    z-index: 10;
+}
+
+.alert { padding: 1rem; margin-bottom: 1.5rem; border-radius: 6px; font-weight: 500; }
+.success { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
+.error { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+
+/* Reviews */
+.reviewList { display: flex; flex-direction: column; gap: 1rem; }
+.reviewItem { background: #f9fafb; padding: 1rem; border-radius: 8px; border-left: 4px solid #0f4c81; }
+.reviewHeader { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.9rem; }
+.stars { display: flex; gap: 2px; }
+.comment { color: #4b5563; font-style: italic; margin: 0; font-size: 0.95rem; }
+.empty { text-align: center; color: #9ca3af; padding: 2rem; }

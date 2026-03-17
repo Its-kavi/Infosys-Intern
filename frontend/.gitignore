@@ -1,0 +1,51 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+playwright-report
+test-results
+tests
+playwright.config.ts
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# === MARKDOWN FILES - STRICT UNTRACKING ===
+# Block ALL .md files everywhere except explicit exceptions
+*.md
+**/*.md
+**/README.md
+frontend/*.md
+frontend/**/*.md
+
+# === EXPLICIT EXCEPTIONS ONLY ===
+!.gitignore
+!README.md                 # ROOT README only
+!LICENSE.md
+!CHANGELOG.md
+!docs/
+!docs/**/*.md
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/

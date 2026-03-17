@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Booking for your Ride</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+    <div style="max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+        <h2 style="color: #28a745;">New Passenger Joined!</h2>
+        <p>Hello <span th:text="${driverName}">Driver</span>,</p>
+        <p>Good news! A new passenger has booked a seat on your ride.</p>
+        <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0;">
+            <p><strong>Passenger:</strong> <span th:text="${passengerName}">Passenger</span></p>
+            <p><strong>Route:</strong> <span th:text="${source}">Source</span> to <span th:text="${dest}">Destination</span></p>
+        </div>
+        <p>Please check your dashboard for more details.</p>
+        <p>Safe driving!<br>The RideConnect Team</p>
+    </div>
+</body>
+</html>

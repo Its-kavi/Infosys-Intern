@@ -1,0 +1,192 @@
+.pageWrapper {
+    min-height: 100vh;
+    background-color: #f8fafc;
+}
+
+.formContainer {
+    max-width: 950px;
+    margin: 3rem auto;
+    background: white;
+    padding: 0;
+    /* Removing padding so header hits the edge */
+    border-radius: 12px;
+    /* var(--radius-lg) usually resolves to ~12px or 0.5rem */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    /* Ensures header border-radius matches container */
+}
+
+.header {
+    background: #2563eb;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.iconWrapper {
+    background: rgba(255, 255, 255, 0.2);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+    backdrop-filter: blur(4px);
+}
+
+.formContainer h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    letter-spacing: -0.025em;
+}
+
+.subtitle {
+    color: #dbeafe;
+    /* Lighter blue */
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 2.5rem;
+    /* Add padding back to the form part */
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+/* Ensure buttons in actions have equal width or flexibility if needed */
+.actions button {
+    min-width: 100px;
+}
+
+.errorAlert {
+    background-color: #fef2f2;
+    border: 1px solid #fee2e2;
+    color: #ef4444;
+    /* var(--error) */
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+@media (max-width: 640px) {
+    .row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .formContainer {
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+    }
+}
+
+/* Suggestion Box */
+.suggestionBox {
+    background-color: #f0f9ff;
+    border: 1px solid #bce3eb;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    color: #0f4c81;
+}
+
+.suggestionBox p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.suggestionBox small {
+    display: block;
+    margin-top: 5px;
+    color: #555;
+    font-size: 0.8rem;
+}
+
+/* Stopover Chip Styles */
+.stopoverInputWrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.stopoverInputWrapper input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.stopoverInputWrapper input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.chipsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+    min-height: 32px;
+    /* Prevent collapse if empty */
+}
+
+.chip {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #bae6fd;
+}
+
+.chipRemove {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 700;
+    color: #0369a1;
+    transition: all 0.2s;
+}
+
+.chipRemove:hover {
+    background: #0369a1;
+    color: white;
+}

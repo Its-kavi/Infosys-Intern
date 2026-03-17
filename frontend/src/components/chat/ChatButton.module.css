@@ -1,0 +1,87 @@
+/* src/components/chat/ChatButton.module.css */
+
+.chatButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.chatButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chatButton:active {
+  transform: translateY(0);
+}
+
+.chatButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Primary variant - gradient */
+.primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.primary:hover {
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Secondary variant - outline */
+.secondary {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.secondary:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* Tertiary variant - subtle */
+.tertiary {
+  background: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
+}
+
+.tertiary:hover {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+/* Icon-only variant */
+.icon {
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .chatButton {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .icon {
+    padding: 8px;
+    width: 36px;
+    height: 36px;
+  }
+}

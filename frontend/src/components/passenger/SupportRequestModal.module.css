@@ -1,0 +1,92 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1.5rem;
+}
+
+.modal {
+    width: min(620px, 100%);
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem 0.75rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #0f172a;
+}
+
+.closeBtn {
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.content {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #334155;
+}
+
+.field label {
+    font-weight: 600;
+}
+
+.field textarea {
+    border: 1px solid #cbd5f5;
+    border-radius: 10px;
+    padding: 0.65rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+.metaRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem 1.25rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.error {
+    background: #fef2f2;
+    color: #b91c1c;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+}

@@ -1,0 +1,334 @@
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: #111827;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navLink {
+    font-weight: 500;
+    color: #4b5563;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.navLink:hover {
+    color: #2563eb;
+}
+
+/* Profile Dropdown */
+.profileContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Notification Styles */
+.notificationContainer {
+    position: relative;
+}
+
+.notificationBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.notificationBtn:hover {
+    background-color: #f3f4f6;
+}
+
+.notificationBadge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notificationDropdown {
+    position: absolute;
+    top: 150%;
+    right: 0;
+    width: 400px;
+    max-height: 500px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    animation: slideDown 0.2s ease-out;
+    z-index: 100;
+}
+
+.notificationHeader {
+    padding: 1rem;
+    border-bottom: 2px solid #e5e7eb;
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notificationHeader h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.markAllBtn {
+    background: none;
+    border: none;
+    color: #2563eb;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.markAllBtn:hover {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.notificationList {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.notificationList::-webkit-scrollbar {
+    width: 6px;
+}
+
+.notificationList::-webkit-scrollbar-track {
+    background: #f3f4f6;
+}
+
+.notificationList::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.notificationList::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+.notificationItem {
+    padding: 1rem;
+    border-bottom: 1px solid #f3f4f6;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.notificationItem:hover {
+    background-color: #f9fafb;
+}
+
+.notificationItem.unread {
+    background-color: #eff6ff;
+}
+
+.notificationItem.unread:hover {
+    background-color: #dbeafe;
+}
+
+.notificationContent {
+    flex: 1;
+}
+
+.notificationTitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.25rem;
+}
+
+.notificationMessage {
+    font-size: 0.8rem;
+    color: #6b7280;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.notificationTime {
+    font-size: 0.7rem;
+    color: #9ca3af;
+}
+
+.unreadDot {
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.notificationEmpty {
+    padding: 2rem;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+.profileBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4b5563;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.profileBtn:hover .avatar {
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+.dropdown {
+    position: absolute;
+    top: 150%;
+    right: 0;
+    width: 250px;
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f3f4f6;
+    overflow: hidden;
+    animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdownHeader {
+    padding: 1rem;
+    border-bottom: 1px solid #f3f4f6;
+    background-color: #f9fafb;
+}
+
+.userRole {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.userEmail {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #6b7280;
+}
+
+.dropdownItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #374151;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background 0.2s ease;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdownItem:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.logoutItem {
+    color: #ef4444;
+    border-top: 1px solid #f3f4f6;
+}
+
+.logoutItem:hover {
+    background-color: #fef2f2;
+    color: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navLinks {
+        gap: 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+}
